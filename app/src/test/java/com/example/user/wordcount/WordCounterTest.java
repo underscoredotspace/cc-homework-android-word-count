@@ -8,13 +8,16 @@ public class WordCounterTest {
 
     @Test
     public void canCountThreeWords() {
-        WordCounter words = new WordCounter();
-        assertEquals(3, words.count("I love you"));
+        assertEquals(3, WordCounter.count("I love you"));
     }
 
     @Test
     public void canCountOneWord() {
-        WordCounter words = new WordCounter();
-        assertEquals(1, words.count("Bananas"));
+        assertEquals(1, WordCounter.count("Bananas"));
+    }
+
+    @Test
+    public void canCountZeroWords() {
+        assertEquals(0, WordCounter.count(""));
     }
 }
